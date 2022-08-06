@@ -64,7 +64,7 @@ class HeadGreeting extends Component {
                         <div className="greet-title" id="day_time_greet" data-time-of-day={this.state.timeOfDay}>Good {this.state.timeOfDay}</div>                           
                         <div className="day-time-title" id="day_time">{moment(this.state.dateTime).format('dddd, MMMM D')}</div>                                                            
                     </Col>
-                    <Col md={3} className='d-none d-md-block'>
+                    <Col md={3} className="text-center">
                         <Link to="/dashboard">Go to Dashboard</Link>
                     </Col>
                 </Row>

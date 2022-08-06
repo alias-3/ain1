@@ -17,7 +17,7 @@
 }
 
 .jumbotron-head {
-    background: var(--bg-base-color-light);
+    background: var(--bg-base-color-dark);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     /*backdrop-filter: saturate(200%) blur(20px);
     -webkit-backdrop-filter: saturate(200%) blur(20px);*/
