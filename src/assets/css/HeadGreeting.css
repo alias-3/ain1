@@ -4,8 +4,8 @@
     --greeting-evening-color-2 : linear-gradient(90deg,#f56772,#ba6bff);
     --greeting-morning-color-2 : white;
     --date-time-title-light-theme : black;
-    --font-size-title-greeting : 6vw;
-    --font-size-title-greeting-sub : 3vw;
+    --font-size-title-greeting : 56px;
+    --font-size-title-greeting-sub : 24px;
 }
 
 .jumbotron-head {
@@ -25,13 +25,14 @@
 }
 
 .greet-title {
-    font-size: var(--font-size-title-greeting);
+    font-size: var(--font-size-title-greeting);    
     color: var(--greeting-base-color);
     background: var(--greeting-evening-color-2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;    
     font-weight: 500;
     text-align: left;
+    
 }
 
 
@@ -42,31 +43,29 @@
     text-align: left
 }
 
-@media (max-width: 575.98px) { 
-    :root{
-        --font-size-title-greeting : 20vw;
-        --font-size-title-greeting-sub : 10vw;
-    }
 
-    .greet-title{
+@media only screen and (max-width: 600px) {
+    :root{
+        --font-size-title-greeting : 56px;
+        --font-size-title-greeting-sub : 24px;
+    } 
+    .greet-title, .day-time-title{
         text-align: center;
     }
 
-    .day-time-title{
-        text-align: center;
-    }
+}
+
+@media only screen and (max-width: 768px) { 
+    :root{
+        --font-size-title-greeting : 64px;
+        --font-size-title-greeting-sub : 30px;
+    }    
  }
 
-@media (max-width: 767.98px) { 
+/* @media only screen and (width > 768px) and (width <= 1250px) { */
+@media only screen and (width > 768px) {    
     :root{
-        --font-size-title-greeting : 8vw;
-        --font-size-title-greeting-sub : 4vw;
-    }
- }
-
-@media (max-width: 1399.98px) {
-    :root{
-        --font-size-title-greeting : 8vw;
-        --font-size-title-greeting-sub : 4vw;
+        --font-size-title-greeting : 84px;
+        --font-size-title-greeting-sub : 40px;
     }
  }
