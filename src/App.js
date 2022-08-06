@@ -1,17 +1,16 @@
-import React from 'react';
+import React from 'react'
 import './assets/css/App.css'
-// import DisplayCard from './components/DisplayCard';
-import HeadGreeting from './components/HeadGreeting';
+import HeadGreeting from './components/HeadGreeting'
+import Dashboard from './components/Dashboard'
+import { Routes, Route, Link } from 'react-router-dom'
+
 
 function App() {
-  return (
-    // <div  id='playArea'>
-        // <div className='fs-1 text-center' style={{
-        // color: '#f5f5f7'
-        //}}>Welcome  Label</div> 
-      <HeadGreeting />
-      //<DisplayCard /> 
-    // </div>
+  return (  
+    <Routes>
+      <Route path="/" element={<HeadGreeting/>} />            
+      <Route path="/dashboard" element={<Dashboard/>} />           
+    </Routes>                     
   );
 }
 

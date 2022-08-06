@@ -1,16 +1,39 @@
 :root {
-  --blue: #1e90ff;
-  --white: #ffffff;
+  --font-color-primary: rgb(249, 249, 249);
+  --font-color-secondary: rgb(193, 193, 193);
+  --font-color-tertiary: rgb(123, 123, 123);
+  --nav-item-link: rgb(17, 17, 17);
+  --nav-item-link: rgb(0, 0, 0);
+  --bg-base-color-dark : black;
+  --bg-base-color-light : rgba(240, 240, 240, 0.2);
+}
+
+body[data-color-scheme='dark'] main {
+  --font-color-primary: rgb(14, 14, 14);
+  --font-color-secondary: rgb(87, 87, 87);
+  --font-color-tertiary: rgb(135, 135, 135);
+  --nav-item-link: rgb(221, 221, 221);
+  --nav-item-link-active: rgb(255, 255, 255);  
 }
 
 body {
     margin: 0;
+    background: var(--bg-base-color-dark);    
     font-family: 'Roboto',sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    letter-spacing: -0.003em;
+    letter-spacing: -0.015em;
     line-height: 1.1;
     overflow-wrap: break-word;
+}
+
+a {
+  color: #06c;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .card-glass {

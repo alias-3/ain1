@@ -1,16 +1,17 @@
-import React, { Component } from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { Component } from "react"
+import 'bootstrap/dist/css/bootstrap.min.css'
 import '../assets/css/HeadGreeting.css' 
-import {Container, Row, Col} from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 import moment from 'moment'
+import { Link } from "react-router-dom"
 
 class HeadGreeting extends Component {
     constructor(props) {
         super(props);  
-        this.state = {
-            greeting    : 'Welcome',
+        this.state = {            
+            timeOfDay   : 'Day',
             dateTime    : new Date()
-        };                
+        };                        
     }
 
     componentDidMount() {
@@ -35,41 +36,39 @@ class HeadGreeting extends Component {
     }
 
     tickGreeting() {
-        let hourOfDay = new Date().getHours();
+        let hourOfDay = new Date().getHours(); 
         if (hourOfDay < 12) {
-            this.setState({
-                greeting    : 'Good Morning'
+            this.setState({                
+                timeOfDay   : 'Morning'
             });
+
         }
         else if (hourOfDay < 18) {
-            this.setState({
-                greeting    : 'Good Afternoon'
+            this.setState({                
+                timeOfDay   : 'Afternoon'                
             });
         }
         else {
-            this.setState({
-                greeting    : 'Good Evening'
+            this.setState({                
+                timeOfDay   : 'Evening'
             });
         }
     }
 
 
     render(){
-        return (
-            
-                <Container fluid className="jumbotron-head">
-                    <Row className='h-100 align-items-center'>
-                        <Col md={9}>                                                            
-                            <div className="greet-title" id="day_time_greet">{this.state.greeting}</div>
-                            <div className="day-time-title" id="day_time">{moment(this.state.dateTime).format('dddd, MMMM D')}</div>                                                            
-                        </Col>
-                        <Col md={3} className='d-none d-xxl-block text-light bg-success'>
-                            
-                        </Col>
-                    </Row>
-                </Container>
-                
-            
+        return (            
+            <Container fluid className="jumbotron-head">
+                <Row className='h-100 align-items-center'>
+                    <Col md={9}>                                                                              
+                        <div className="greet-title" id="day_time_greet" data-time-of-day={this.state.timeOfDay}>Good {this.state.timeOfDay}</div>                           
+                        <div className="day-time-title" id="day_time">{moment(this.state.dateTime).format('dddd, MMMM D')}</div>                                                            
+                    </Col>
+                    <Col md={3} className='d-none d-md-block'>
+                        <Link to="/dashboard">Go to Dashboard</Link>
+                    </Col>
+                </Row>
+            </Container>                            
         );
     }
     

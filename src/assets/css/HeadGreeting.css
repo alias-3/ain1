@@ -1,22 +1,30 @@
 :root{
+    --bg-base-color-dark : black;
+    --bg-base-color-light : rgba(240, 240, 240, 0.2);
     --greeting-base-color: blue;
-    --greeting-evening-color-1 : linear-gradient(225deg, #ff5ea7 36.04%, #010fcb 88.83%, #ff6530 220.3%);
-    --greeting-evening-color-2 : linear-gradient(90deg,#f56772,#ba6bff);
-    --greeting-morning-color-2 : white;
+    --greeting-color-1 : linear-gradient(225deg, #ff5ea7 36.04%, #010fcb 88.83%, #ff6530 220.3%);
+    --greeting-color-2 : linear-gradient(90deg,#f56772,#ba6bff);
+    --greeting-color-3 : linear-gradient(110deg,#ff6673,#ff6673,#cc25e4,#7c00ff);
+    --greeting-color-4 : linear-gradient(90deg,#ED186A,#FF6700,#FFCB39);
+    --greeting-color-5 : linear-gradient(90deg, rgb(237, 24, 106) 0%, rgb(255, 103, 0) 100%, rgb(255, 203, 57) 200%, rgb(29, 29, 31) 300%);
+    --greeting-color-6 : -webkit-linear-gradient(0deg,#dc36fa,#a167ef 30%,#609fe4 45%,#3abfde 70%,#04d18e 85%);
+    --greeting-white-color : white;
+    --greeting-black-color : black;
     --date-time-title-light-theme : black;
+    --date-time-title-dark-theme : white;
     --font-size-title-greeting : 56px;
     --font-size-title-greeting-sub : 24px;
 }
 
 .jumbotron-head {
-    background: rgba(240, 240, 240, 0.2);
+    background: var(--bg-base-color-light);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     /*backdrop-filter: saturate(200%) blur(20px);
     -webkit-backdrop-filter: saturate(200%) blur(20px);*/
     backdrop-filter: saturate(220%);
     -webkit-backdrop-filter: saturate(220%);
     border: none;
-    border-radius: 18px;
+    /* border-radius: 18px; */
     padding: 3em !important;
     /* min-height: 600px; */
     height: 100vh;
@@ -24,21 +32,31 @@
     /* margin-bottom: 2rem; */
 }
 
+.greet-title[data-time-of-day="Evening"] {
+    background: var(--greeting-color-6) !important;
+    -webkit-background-clip: text !important;
+}
+
+.greet-title[data-time-of-day="Afternoon"] {
+    background: var(--greeting-color-4) !important;
+    -webkit-background-clip: text !important;
+}
+
 .greet-title {
     font-size: var(--font-size-title-greeting);    
     color: var(--greeting-base-color);
-    background: var(--greeting-evening-color-2);
+    background: var(--greeting-color-3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;    
     font-weight: 500;
     text-align: left;
-    
+    padding-bottom: 0.5rem;
 }
 
 
 .day-time-title {
     font-size: var(--font-size-title-greeting-sub);
-    color: var(--date-time-title-light-theme);
+    color: var(--date-time-title-dark-theme);
     font-weight: 500;
     text-align: left
 }
@@ -46,7 +64,7 @@
 
 @media only screen and (max-width: 600px) {
     :root{
-        --font-size-title-greeting : 56px;
+        --font-size-title-greeting : 60px;
         --font-size-title-greeting-sub : 24px;
     } 
     .greet-title, .day-time-title{
@@ -55,17 +73,17 @@
 
 }
 
-@media only screen and (max-width: 768px) { 
+@media only screen and (600px < width) and (width <= 768px) { 
     :root{
         --font-size-title-greeting : 64px;
-        --font-size-title-greeting-sub : 30px;
+        --font-size-title-greeting-sub : 28px;
     }    
  }
 
 /* @media only screen and (width > 768px) and (width <= 1250px) { */
 @media only screen and (width > 768px) {    
     :root{
-        --font-size-title-greeting : 84px;
-        --font-size-title-greeting-sub : 40px;
+        --font-size-title-greeting : 96px;
+        --font-size-title-greeting-sub : 36px;
     }
  }
