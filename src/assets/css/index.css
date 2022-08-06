@@ -1,0 +1,38 @@
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto',sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: -1.25px;
+}
+
+.card-glass {
+  background: rgba( 255, 255, 255, 0.95 );
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  /*backdrop-filter: saturate(280%) blur(20px);
+  -webkit-backdrop-filter: saturate(280%) blur(20px);*/
+  border: none;
+  border-radius: 15px;
+  padding: 3rem !important;
+  display: inline-block; 
+  min-height: 300px;
+  margin-bottom: 2rem;
+}
+
+.card-glass-1{
+  background: rgba(199, 199, 199, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur( 4.5px );
+  -webkit-backdrop-filter: blur( 4.5px );
+  border: none;
+  border-radius: 15px;
+  padding: 3rem !important;
+  display: inline-block; 
+  min-height: 300px;
+  margin-bottom: 2rem;
+}

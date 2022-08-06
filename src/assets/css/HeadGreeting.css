@@ -1,0 +1,72 @@
+:root{
+    --greeting-base-color: blue;
+    --greeting-evening-color-1 : linear-gradient(225deg, #ff5ea7 36.04%, #010fcb 88.83%, #ff6530 220.3%);
+    --greeting-evening-color-2 : linear-gradient(90deg,#f56772,#ba6bff);
+    --greeting-morning-color-2 : white;
+    --date-time-title-light-theme : black;
+    --font-size-title-greeting : 6vw;
+    --font-size-title-greeting-sub : 3vw;
+}
+
+.jumbotron-head {
+    background: rgba(240, 240, 240, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    /*backdrop-filter: saturate(200%) blur(20px);
+    -webkit-backdrop-filter: saturate(200%) blur(20px);*/
+    backdrop-filter: saturate(220%);
+    -webkit-backdrop-filter: saturate(220%);
+    border: none;
+    border-radius: 18px;
+    padding: 3em !important;
+    /* min-height: 600px; */
+    height: 100vh;
+    margin: auto;
+    /* margin-bottom: 2rem; */
+}
+
+.greet-title {
+    font-size: var(--font-size-title-greeting);
+    color: var(--greeting-base-color);
+    background: var(--greeting-evening-color-2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;    
+    font-weight: 500;
+    text-align: left;
+}
+
+
+.day-time-title {
+    font-size: var(--font-size-title-greeting-sub);
+    color: var(--date-time-title-light-theme);
+    font-weight: 500;
+    text-align: left
+}
+
+@media (max-width: 575.98px) { 
+    :root{
+        --font-size-title-greeting : 20vw;
+        --font-size-title-greeting-sub : 10vw;
+    }
+
+    .greet-title{
+        text-align: center;
+    }
+
+    .day-time-title{
+        text-align: center;
+    }
+ }
+
+@media (max-width: 767.98px) { 
+    :root{
+        --font-size-title-greeting : 8vw;
+        --font-size-title-greeting-sub : 4vw;
+    }
+ }
+
+@media (max-width: 1399.98px) {
+    :root{
+        --font-size-title-greeting : 8vw;
+        --font-size-title-greeting-sub : 4vw;
+    }
+ }
