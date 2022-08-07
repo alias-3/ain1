@@ -9,13 +9,13 @@ import WatchCard from "./WatchCard"
 class Dashboard extends Component {
     render() {
         return (
-            <Container fluid className="vh-100 mt-3 mb-3">                
+            <Container className="vh-100 mt-3 mb-3">                
                 <Row className="p-2 mb-2">
                     <Col md={6} className="mb-4">
-                        <WatchCard/>
+                        <NewsCard/>
                     </Col> 
                     <Col md={6} className="mb-4">
-                        <NewsCard/>
+                        <WatchCard/>
                     </Col>                    
                 </Row>    
                 <Row className="p-2 mb-2 text-center">  
