@@ -1,6 +1,7 @@
 :root{
     --bg-base-color-dark : black;
-    --bg-base-color-light : rgba(240, 240, 240, 0.2);
+    /* --bg-base-color-light : rgba(240, 240, 240, 0.2); */
+    --bg-base-color-light : #f2f2f2;
     --greeting-base-color: blue;
     --greeting-color-1 : linear-gradient(225deg, #ff5ea7 36.04%, #010fcb 88.83%, #ff6530 220.3%);
     --greeting-color-2 : linear-gradient(90deg,#f56772,#ba6bff);

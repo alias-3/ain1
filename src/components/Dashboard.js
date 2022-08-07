@@ -8,7 +8,7 @@ import NewsCard from "./NewsCard"
 class Dashboard extends Component {
     render() {
         return (
-        <NewsCard/>
+            <NewsCard/>
         );
     }
 }

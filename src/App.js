@@ -8,8 +8,9 @@ import { Routes, Route, Link } from 'react-router-dom'
 function App() {
   return (  
     <Routes>
+      <Route path="*" element={<HeadGreeting/>} />                 
       <Route path="/" element={<HeadGreeting/>} />            
-      <Route path="/dashboard" element={<Dashboard/>} />           
+      <Route path="/dashboard" element={<Dashboard/>} />                 
     </Routes>                     
   );
 }

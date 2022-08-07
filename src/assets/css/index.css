@@ -5,7 +5,8 @@
   --nav-item-link: rgb(17, 17, 17);
   --nav-item-link: rgb(0, 0, 0);
   --bg-base-color-dark : black;
-  --bg-base-color-light : rgba(240, 240, 240, 0.2);
+  /* --bg-base-color-light : rgba(240, 240, 240, 0.2); */
+  --bg-base-color-light : #f2f2f2;
 }
 
 body[data-color-scheme='dark'] main {
