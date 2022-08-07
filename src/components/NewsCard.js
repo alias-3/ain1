@@ -1,36 +1,38 @@
 import { React, Component } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link } from "react-router-dom";
+import { Card } from "react-bootstrap";
 
-class NewsCard extends Component {
-    
+class NewsCard extends Component {   
 
-    componentDidMount() {  
-        const inshorts = require('inshorts-news-api');     
+    componentDidMount() {   
+        const NEWS_API_KEY = 'd9adddef1ca84cd7b2668089b25ae073';       
         var options = {
-            lang: 'en',
-            category: ''
+            country :   'in',
+            category:   'techonology'         
         }
-          
-        inshorts.getNews(options ,function(result, news_offset){
-            console.log(result);
-            console.log(news_offset);
-        });
+ 
+        fetch('https://newsapi.org/v2/everything?domains=google.com&apiKey=d9adddef1ca84cd7b2668089b25ae073')
+        .then((res) => res.json())
+        .then((json) => {
+            console.log(json)
+        });        
     }
-
-
 
 
     render() {
         return (
-            <Link to="/">
-                <div className="p-4 m-3 bg-dark mh-50 text-center" style={{
-                    borderRadius: '10px'
-                }}>              
-                    Home
-                        
-                </div>
-            </Link>    
+            <Card>
+                <Card.Body>
+                    <Card.Title>News</Card.Title>
+                    <Card.Subtitle>Get Insights</Card.Subtitle>
+                    <Card.Text>
+                    Some quick example text to build on the card title and make up the
+                    bulk of the card's content.
+                    </Card.Text>
+                    <Card.Link href="#">Card Link</Card.Link>
+                    <Card.Link href="#">Another Link</Card.Link>
+                </Card.Body>
+            </Card>
         );
     }    
 }
