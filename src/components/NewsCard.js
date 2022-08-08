@@ -1,7 +1,6 @@
 import { React, Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Card, Button, Col, Row } from 'react-bootstrap'
-import news_fallback_img from '../assets/img/news_fall_back.png'
 
 class NewsCard extends Component {   
     constructor(props) {
@@ -17,27 +16,71 @@ class NewsCard extends Component {
             category:   'techonology'         
         }
         
-        this.fetchNewsFromAPI();
+        // this.fetchNewsFromNewsAPI();
+        this.fetchNewsFromMediaStackAPI();
     }
 
-    fetchNewsFromAPI() {
+    // fetchNewsFromNewsAPI() {
+    //     console.clear();
+    //     this.newsListRender = [];
+    //     let newsCategory = 'technology';
+    //     const NEWS_API_KEY = 'd9adddef1ca84cd7b2668089b25ae073';  
+    //     const NEWS_API_URL = 'https://newsapi.org/v2/top-headlines?country=in&category='+newsCategory+'&apiKey='+NEWS_API_KEY;
+    //     fetch(NEWS_API_URL)
+    //     .then(res => res.json())
+    //     .then(res => {    
+    //         let newsRes = res.articles;                                       
+    //         this.setState({ 
+    //             newsList : newsRes,                
+    //         });     
+    //         if(newsRes.length > 0){
+    //             for (var i = 0; i < 8; i++) {                    
+    //                 //console.log(newsRes[i]);
+    //                 let refinedTitle = newsRes[i].title.replace(' - ' + newsRes[i].source.name,'');
+    //                 let imgUrl = newsRes[i].urlToImage ? newsRes[i].urlToImage : { news_fallback_img }
+                    
+    //                 //console.log(refinedTitle);
+    //                 this.newsListRender.push(        
+    //                     <div>
+    //                         <Row key={i}>                                                        
+    //                             <Col md={9}>
+    //                                 <a href={newsRes[i].url} className="news-title-link" target="_blank">{refinedTitle}</a>   
+    //                             </Col>
+    //                             <Col className="d-none d-md-block">
+    //                                 <img className="mw-100 mh-100" src={imgUrl} />   
+    //                             </Col>                                                   
+    //                         </Row>
+    //                         <hr />  
+    //                     </div>                                                                                           
+    //                 )
+    //             }
+    //             console.log('Updated News Items List: ' + this.newsListRender );
+    //         }                                          
+    //     })
+    //     .catch(error => {
+    //         console.log(error);
+    //     });          
+    // }
+
+    fetchNewsFromMediaStackAPI() {
         console.clear();
         this.newsListRender = [];
-        let newsCategory = 'technology';
-        const NEWS_API_KEY = 'd9adddef1ca84cd7b2668089b25ae073';  
-        const NEWS_API_URL = 'https://newsapi.org/v2/top-headlines?country=in&category='+newsCategory+'&apiKey='+NEWS_API_KEY;
-        fetch(NEWS_API_URL)
+        let newsCategory = 'business';
+        const MEDIASTACK_API_KEY = '84454286fbabd467c0bc0ea0275bb0b6';  
+        const MEDIASTACK_API_URL = 'http://api.mediastack.com/v1/news?access_key='+MEDIASTACK_API_KEY+'&countries=in&categories='+newsCategory+'';
+        fetch(MEDIASTACK_API_URL)
         .then(res => res.json())
         .then(res => {    
-            let newsRes = res.articles;                                       
+            console.log(res);
+            let newsRes = res.data;                                       
             this.setState({ 
                 newsList : newsRes,                
             });     
             if(newsRes.length > 0){
                 for (var i = 0; i < 8; i++) {                    
-                    //console.log(newsRes[i]);
-                    let refinedTitle = newsRes[i].title.replace(' - ' + newsRes[i].source.name,'');
-                    let imgUrl = newsRes[i].urlToImage ? newsRes[i].urlToImage : { news_fallback_img }
+                    console.log(newsRes[i]);
+                    let refinedTitle = newsRes[i].title.replace(newsRes[i].source,'');
+                    let imgUrl = newsRes[i].image ? newsRes[i].image : "../assets/img/news_fall_back.png"
                     
                     //console.log(refinedTitle);
                     this.newsListRender.push(        
@@ -81,7 +124,7 @@ class NewsCard extends Component {
                         {cardContent}
                     </div>      
                     <div className="text-center text-md-end ">
-                        <a href="javascript: void(0)" onClick={this.fetchNewsFromAPI.bind(this)}>Refresh</a>                
+                        <a href="javascript: void(0)" onClick={this.fetchNewsFromMediaStackAPI.bind(this)}>Refresh</a>                
                     </div>                                                                                                                                              
                     
                 </Card.Body>
