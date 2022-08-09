@@ -18,7 +18,7 @@ class NewsCard extends Component {
         
         // this.fetchNewsFromNewsAPI();
         // this.fetchNewsFromMediaStackAPI();
-        this.fetchNewsFromNewsDataAPI();
+        // this.fetchNewsFromNewsDataAPI();
     }
 
     fetchNewsFromNewsAPI = () => {
@@ -174,7 +174,8 @@ class NewsCard extends Component {
                         {cardContent}
                     </div>      
                     <div className="text-center text-md-end ">
-                        <a href="javascript: void(0)" onClick={this.fetchNewsFromNewsDataAPI}>Refresh</a>                
+                        {/* <a href="javascript: void(0)" onClick={this.fetchNewsFromNewsDataAPI}>Refresh</a> */}
+                        <a href="javascript: void(0)" onClick={this.fetchNewsFromNewsAPI}>Refresh</a>                
                     </div>                                                                                                                                              
                     
                 </Card.Body>
