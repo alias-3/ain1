@@ -1,5 +1,5 @@
 import { React, Component } from 'react'
-import { Card } from 'react-bootstrap'
+import { Card, Row, Col } from 'react-bootstrap'
 
 class StockMarketCard extends Component {   
 
@@ -59,25 +59,24 @@ class StockMarketCard extends Component {
                     <Card.Title>Markets</Card.Title>
                     <Card.Subtitle>Track markets</Card.Subtitle>
                     <div className="card-text">
+                        <Row>
+                            <Col className="d-flex justify-content-center align-items-center">
+                                {/* TradingView widget */}
+                                {/* <div id="stock_widget_1" className="stock-widget">
+                                    <div class="tradingview-widget-container">
+                                        <div class="tradingview-widget-container__widget"></div>
+                                        <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/symbols/EURUSD/?exchange=FX" rel="noopener" target="_blank"><span class="blue-text">EURUSD Rates</span></a> by TradingView</div>                        
+                                    </div>
+                                </div> */}
 
 
-                        {/* TradingView widget */}
-                        {/* <div id="stock_widget_1" className="stock-widget">
-                            <div class="tradingview-widget-container">
-                                <div class="tradingview-widget-container__widget"></div>
-                                <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/symbols/EURUSD/?exchange=FX" rel="noopener" target="_blank"><span class="blue-text">EURUSD Rates</span></a> by TradingView</div>                        
-                            </div>
-                        </div> */}
-
-
-                        {/* Tickertape widget  */}
-                        <div style={{overflow:'hidden'}}>
-                            <iframe id="ticker_tape_card" title="tickertapeFrame" src="https://www.gateway-tt.in/trade?orderConfig=%5B%7B%22quantity%22%3A10%2C%22ticker%22%3A%22RELIANCE%22%7D%5D&cardsize=small&withSearch=true&withTT=true"
-                            ></iframe>
-                        </div>
-                        
-
-
+                                {/* Tickertape widget  */}
+                                <div style={{overflow:'hidden'}}>
+                                    <iframe id="ticker_tape_card" title="tickertapeFrame" src="https://www.gateway-tt.in/trade?orderConfig=%5B%7B%22quantity%22%3A10%2C%22ticker%22%3A%22RELIANCE%22%7D%5D&cardsize=small&withSearch=true&withTT=true"
+                                    ></iframe>
+                                </div>
+                            </Col>
+                        </Row>                        
                     </div>
                 </Card.Body>
             </Card>

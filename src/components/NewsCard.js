@@ -1,5 +1,6 @@
 import { React, Component } from 'react'
 import { Card, Button, Col, Row } from 'react-bootstrap'
+import news_fall_back_img from '../assets/img/news_fall_back1.png'
 
 class NewsCard extends Component {   
     constructor(props) {
@@ -15,9 +16,9 @@ class NewsCard extends Component {
             category:   'techonology'         
         }
         
-        // this.fetchNewsFromNewsAPI();
+        this.fetchNewsFromNewsAPI();
         // this.fetchNewsFromMediaStackAPI();
-        this.fetchNewsFromNewsDataAPI();
+        // this.fetchNewsFromNewsDataAPI();
     }
 
     
@@ -67,8 +68,8 @@ class NewsCard extends Component {
             if(newsRes.length > 0){
                 for (var i = 0; i < 8; i++) {                    
                     //console.log(newsRes[i]);
-                    let refinedTitle = newsRes[i].title.replace(' - ' + newsRes[i].source.name,'');
-                    let imgUrl = newsRes[i].urlToImage ? newsRes[i].urlToImage : "../assets/img/news_fall_back.png";
+                    let refinedTitle = newsRes[i].title.replace(' - ' + newsRes[i].source.name,'');                    
+                    let imgUrl = newsRes[i].urlToImage ? newsRes[i].urlToImage : news_fall_back_img;
                     
                     //console.log(refinedTitle);
                     this.newsListRender.push(        
@@ -78,7 +79,7 @@ class NewsCard extends Component {
                                     <a href={newsRes[i].url} className="news-title-link" target="_blank">{refinedTitle}</a>   
                                 </Col>
                                 <Col xs={4} md={3} className="text-end">
-                                    <img className="news-image" width="70" height="35" src={imgUrl} />   
+                                    <img className="news-image" width="70" height="40" src={imgUrl} />   
                                 </Col>                                                   
                             </Row>                            
                         </div>                                                                                           
@@ -109,7 +110,7 @@ class NewsCard extends Component {
                 for (var i = 0; i < 8; i++) {                    
                     //console.log(newsRes[i]);
                     let refinedTitle = newsRes[i].title.replace(' - ' + newsRes[i].source_id,'');
-                    let imgUrl = newsRes[i].image_url ? newsRes[i].image_url : "../assets/img/news_fall_back.png";
+                    let imgUrl = newsRes[i].image_url ? newsRes[i].image_url : news_fall_back_img;
 
                     //console.log(refinedTitle);
                     this.newsListRender.push(        
@@ -119,7 +120,7 @@ class NewsCard extends Component {
                                     <a href={newsRes[i].url} className="news-title-link" target="_blank">{refinedTitle}</a>   
                                 </Col>
                                 <Col xs={4} md={3} className="text-end">
-                                    <img className="news-image" width="70" height="35" src={imgUrl} />   
+                                    <img className="news-image" width="70" height="40" src={imgUrl} />   
                                 </Col>                                                   
                             </Row>                            
                         </div>                                                                                           
@@ -151,7 +152,7 @@ class NewsCard extends Component {
     //             for (var i = 0; i < 8; i++) {                    
     //                 console.log(newsRes[i]);
     //                 let refinedTitle = newsRes[i].title.replace(newsRes[i].source,'');
-    //                 let imgUrl = newsRes[i].image ? newsRes[i].image : "../assets/img/news_fall_back.png";
+    //                 let imgUrl = newsRes[i].image ? newsRes[i].image : news_fall_back_img;
                     
     //                 //console.log(refinedTitle);
     //                 this.newsListRender.push(        

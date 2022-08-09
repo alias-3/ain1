@@ -4,6 +4,7 @@ import moment from 'moment'
 import { Link } from "react-router-dom"
 import NewsCard from "./NewsCard"
 import WatchCard from "./WatchCard"
+import WeatherCard from './WeatherCard'
 import StockMarketCard from "./StockMarketCard"
 import WebMdFooter from "./WebMdFooter"
 
@@ -21,10 +22,11 @@ class Dashboard extends Component {
                 </Row>         
                 <Row>
                     <Col md={6} className="p-4">
-                        <StockMarketCard/>
+                        <WeatherCard />
                     </Col> 
-                    {/* <Col md={6} className="p-4">                        
-                    </Col>                     */}
+                    <Col md={6} className="p-4">                        
+                        <StockMarketCard />
+                    </Col>                    
                 </Row>           
 
                 <div className="text-center text-muted mb-4" style={{ marginTop:'2em' }}>© 2022 Anurag Wani</div>                
