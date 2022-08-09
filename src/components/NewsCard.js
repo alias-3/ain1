@@ -9,9 +9,6 @@ class NewsCard extends Component {
         this.state = {            
             newsList : []            
         }
-        // this.fetchNewsFromMediaStackAPI.bind(this);
-        // this.fetchNewsFromNewsDataAPI.bind(this);
-        // this.fetchNewsFromNewsAPI.bind(this);
     }
 
     componentDidMount() {                     
@@ -21,7 +18,7 @@ class NewsCard extends Component {
         
         // this.fetchNewsFromNewsAPI();
         // this.fetchNewsFromMediaStackAPI();
-        this.fetchNewsFromNewsAPI();
+        this.fetchNewsFromNewsDataAPI();
     }
 
     fetchNewsFromNewsAPI = () => {
@@ -177,7 +174,7 @@ class NewsCard extends Component {
                         {cardContent}
                     </div>      
                     <div className="text-center text-md-end ">
-                        <a href="javascript: void(0)" onClick={this.fetchNewsFromNewsAPI}>Refresh</a>                
+                        <a href="javascript: void(0)" onClick={this.fetchNewsFromNewsDataAPI}>Refresh</a>                
                     </div>                                                                                                                                              
                     
                 </Card.Body>
