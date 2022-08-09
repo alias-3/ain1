@@ -72,8 +72,9 @@ class StockMarketCard extends Component {
 
 
                         {/* Tickertape widget  */}
-                        <iframe id="ticker_tape_card" title="tickertapeFrame" src="https://www.gateway-tt.in/trade?orderConfig=%5B%7B%22quantity%22%3A10%2C%22ticker%22%3A%22RELIANCE%22%7D%5D&cardsize=big&withSearch=true&withTT=true"
-                         width="500px" height="350px"></iframe>
+                        
+                        <iframe id="ticker_tape_card" title="tickertapeFrame" src="https://www.gateway-tt.in/trade?orderConfig=%5B%7B%22quantity%22%3A10%2C%22ticker%22%3A%22RELIANCE%22%7D%5D&cardsize=small&withSearch=true&withTT=true"
+                         width="500px" height="400px"></iframe>
 
 
                     </div>

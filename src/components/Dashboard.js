@@ -10,15 +10,7 @@ import StockMarketCard from "./StockMarketCard"
 class Dashboard extends Component {
     render() {
         return (
-            <Container className="vh-100 mt-3 mb-3">     
-                <Row className="p-2 mb-2">
-                    <Col md={6} className="mb-4">
-                        <StockMarketCard/>
-                    </Col> 
-                    <Col md={6} className="mb-4">
-                        {/* <WatchCard/> */}
-                    </Col>                    
-                </Row>             
+            <Container className="vh-100 mt-3 mb-3">                                
                 <Row className="p-2 mb-2">
                     <Col md={6} className="mb-4">
                         <NewsCard/>
@@ -26,7 +18,15 @@ class Dashboard extends Component {
                     <Col md={6} className="mb-4">
                         <WatchCard/>
                     </Col>                    
-                </Row>                  
+                </Row>         
+                <Row className="p-2 mb-2">
+                    <Col md={6} className="mb-4">
+                        <StockMarketCard/>
+                    </Col> 
+                    <Col md={6} className="mb-4">
+                        {/* <WatchCard/> */}
+                    </Col>                    
+                </Row>           
                 <Row className="p-2 mb-2 text-center">  
                     <Col className="mb-4">
                         <Link to="/" role="button" className="btn btn-lg btn-danger">                                        
