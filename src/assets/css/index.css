@@ -96,7 +96,7 @@ a {
   font-size: var(--font-size-card-body-text);    
   margin-top: 2rem;
   margin-bottom: 2rem;
-  height: 100%;
+  height: fit-content;
 }
 
 .card-text a {
@@ -143,6 +143,7 @@ p {
   align-items: center;
   font-size: var(--font-size-card-small-text);
   text-align: justify;
+  width: 100%;
 }
 
 iframe {

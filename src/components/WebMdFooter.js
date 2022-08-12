@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 export default function WebMdFooter() {
   return (    
-      <div className="py-2 px-3">
+      <div className="py-2 px-4">
         <ul className="nav justify-content-between p-1">
           <li className="nav-item">
             {/* <a href="" className="nav-link px-2 text-muted">Home</a> */}

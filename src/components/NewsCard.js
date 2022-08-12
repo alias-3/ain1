@@ -16,9 +16,9 @@ class NewsCard extends Component {
             category:   'techonology'         
         }
         
-        this.fetchNewsFromNewsAPI();
+        // this.fetchNewsFromNewsAPI();        
+        this.fetchNewsFromNewsDataAPI();
         // this.fetchNewsFromMediaStackAPI();
-        // this.fetchNewsFromNewsDataAPI();
     }
 
     
@@ -41,9 +41,10 @@ class NewsCard extends Component {
                         {cardContent}
                     </div>  
 
-                    <Card.Footer className="text-center text-md-end">
+                    <Card.Footer className="text-center text-md-end">                        
+                        {/* <a className='btn btn-primary btn-gradient-3' href="javascript: void(0)" onClick={this.fetchNewsFromNewsAPI}>Refresh</a>      */}
                         <a className='btn btn-primary btn-gradient-3' href="javascript: void(0)" onClick={this.fetchNewsFromNewsDataAPI}>Refresh</a> 
-                        {/* <a className='btn btn-primary btn-gradient-3' href="javascript: void(0)" onClick={this.fetchNewsFromNewsAPI}>Refresh</a>                 */}
+                        {/* <a className='btn btn-primary btn-gradient-3' href="javascript: void(0)" onClick={this.fetchNewsFromMediaStackAPI}>Refresh</a>  */}
                     </Card.Footer>                                                                                                                                                                                        
                 </Card.Body>                                
             </Card>
@@ -55,7 +56,7 @@ class NewsCard extends Component {
     fetchNewsFromNewsAPI = () => {
         console.clear();
         this.newsListRender = [];
-        let newsCategory = 'technology';
+        let newsCategory = 'business';
         const NEWS_API_KEY = 'd9adddef1ca84cd7b2668089b25ae073';  
         const NEWS_API_URL = 'https://newsapi.org/v2/top-headlines?country=in&category='+newsCategory+'&apiKey='+NEWS_API_KEY;
         fetch(NEWS_API_URL)
@@ -96,7 +97,7 @@ class NewsCard extends Component {
     fetchNewsFromNewsDataAPI = () => {
         console.clear();
         this.newsListRender = [];
-        let newsCategory = 'technology';
+        let newsCategory = 'business';
         const NEWS_API_KEY = 'pub_100376a5aa21c17c81bff50ecaaca5aa224ee';  
         const NEWS_API_URL = 'https://newsdata.io/api/1/news?country=in&category='+newsCategory+'&apiKey='+NEWS_API_KEY;
         fetch(NEWS_API_URL)

@@ -21,11 +21,11 @@ class Dashboard extends Component {
                     </Col>                    
                 </Row>         
                 <Row>
-                    <Col md={6} className="p-4">
-                        <WeatherCard />
+                    <Col md={4} className="p-4">
+                        <StockMarketCard />                        
                     </Col> 
-                    <Col md={6} className="p-4">                        
-                        <StockMarketCard />
+                    <Col md={8} className="p-4">                        
+                        <WeatherCard />
                     </Col>                    
                 </Row>           
 
