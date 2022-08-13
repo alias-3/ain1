@@ -13,8 +13,8 @@ class NewsCard extends Component {
 
     componentDidMount() {                         
         
-        this.fetchNewsFromNewsAPI();        
-        // this.fetchNewsFromNewsDataAPI();
+        // this.fetchNewsFromNewsAPI();        
+        this.fetchNewsFromNewsDataAPI();
         // this.fetchNewsFromMediaStackAPI();
     }
 
@@ -39,8 +39,8 @@ class NewsCard extends Component {
                     </div>  
 
                     <Card.Footer className="text-center text-md-end">                        
-                        <a className='btn btn-primary btn-gradient-3' href="javascript: void(0)" onClick={this.fetchNewsFromNewsAPI}>Refresh</a>     
-                        {/* <a className='btn btn-primary btn-gradient-3' href="javascript: void(0)" onClick={this.fetchNewsFromNewsDataAPI}>Refresh</a>  */}
+                        {/* <a className='btn btn-primary btn-gradient-3' href="javascript: void(0)" onClick={this.fetchNewsFromNewsAPI}>Refresh</a>      */}
+                        <a className='btn btn-primary btn-gradient-3' href="javascript: void(0)" onClick={this.fetchNewsFromNewsDataAPI}>Refresh</a> 
                         {/* <a className='btn btn-primary btn-gradient-3' href="javascript: void(0)" onClick={this.fetchNewsFromMediaStackAPI}>Refresh</a>*/}
                     </Card.Footer>                                                                                                                                                                                        
                 </Card.Body>                                
