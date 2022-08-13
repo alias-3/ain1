@@ -50,8 +50,7 @@ class NewsCard extends Component {
     
 
 
-    fetchNewsFromNewsAPI = () => {
-        console.clear();
+    fetchNewsFromNewsAPI = () => {        
         this.newsListRender = [];
         let newsCategory = 'business';
         const NEWS_API_KEY = 'd9adddef1ca84cd7b2668089b25ae073';  
@@ -91,8 +90,7 @@ class NewsCard extends Component {
         });          
     }
 
-    fetchNewsFromNewsDataAPI = () => {
-        console.clear();
+    fetchNewsFromNewsDataAPI = () => {        
         this.newsListRender = [];
         let newsCategory = 'business';
         const NEWS_API_KEY = 'pub_100376a5aa21c17c81bff50ecaaca5aa224ee';  
@@ -132,8 +130,7 @@ class NewsCard extends Component {
         });          
     }
 
-        // fetchNewsFromMediaStackAPI = () => {
-    //     console.clear();
+    // fetchNewsFromMediaStackAPI = () => {    
     //     this.newsListRender = [];
     //     let newsCategory = 'business';
     //     const MEDIASTACK_API_KEY = '84454286fbabd467c0bc0ea0275bb0b6';  

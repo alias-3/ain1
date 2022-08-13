@@ -14,7 +14,7 @@ class Dashboard extends Component {
             <Container fluid className="vh-100 mt-3 mb-3">                                               
                 <Row>
                     <Col md={8} className="p-4">
-                        <WatchCard/>
+                        <WeatherCard />                        
                     </Col> 
                     <Col md={4} className="p-4">
                         <NewsCard/>
@@ -24,8 +24,8 @@ class Dashboard extends Component {
                     <Col md={4} className="p-4">
                         <StockMarketCard />                        
                     </Col> 
-                    <Col md={8} className="p-4">                        
-                        <WeatherCard />
+                    <Col md={8} className="p-4">                                                
+                        <WatchCard />
                     </Col>                    
                 </Row>           
 

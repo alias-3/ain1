@@ -1,6 +1,6 @@
-import React, { Component } from "react"
+// import React, { Component } from "react"
 // import '../assets/css/Dashboard.css' 
-import { Container, Row, Col, Card, Button } from 'react-bootstrap'
+// import { Container, Row, Col, Card, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 export default function WebMdFooter() {
@@ -12,10 +12,15 @@ export default function WebMdFooter() {
             <Link to="/">                                        
               <i className="bi bi-arrow-left-circle" style={{fontSize:'2rem', color: 'aquamarine'}}></i>                                                      
             </Link> 
-          </li> 
+          </li>           
           <li className="nav-item">
             <Link to="/">                                        
               <i className="bi bi-house" style={{fontSize:'2rem', color: 'aquamarine'}}></i>                                                      
+            </Link> 
+          </li> 
+          <li className="nav-item">
+            <Link to="/">                                        
+              <i className="bi bi-chat-left-dots" style={{fontSize:'2rem', color: 'aquamarine'}}></i>                                                      
             </Link> 
           </li>         
         </ul>        
