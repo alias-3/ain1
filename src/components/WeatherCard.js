@@ -51,11 +51,11 @@ class WatchCard extends Component {
 
 
     weatherWidget5 = () => {
-        if (document.getElementsByClassName("weather-widget-5")) {
+        if (document.getElementById("ww_e38277875b04a")) {
             const script = document.createElement('script');
-            script.src = 'https://srv1.weatherwidget.org/js/?id=ww_fe074915bc6fb';
+            script.src = 'https://srv1.weatherwidget.org/js/?id=ww_e38277875b04a';
             script.async = true;
-            document.getElementsByClassName("weather-widget-5")[0].appendChild(script);
+            document.body.appendChild(script);
         }        
     }
 
@@ -66,19 +66,19 @@ class WatchCard extends Component {
                 <Card.Body>
                     <Card.Title>Weather</Card.Title>
                     <Card.Subtitle>Climate at a glance</Card.Subtitle>
-                    <div className="card-text"> 
+                    <div className="card-content"> 
                         <Row className="align-items-center" style={{height:'inherit'}}>
                             {/* <Col md={6} className="d-none d-md-block">
                                 Wherever you go, no matter what the weather, always bring your own sunshine. Sunshine is delicious, rain is refreshing, 
                                 wind braces us up, snow is exhilarating;
                                  there is really no such thing as bad weather, only different kinds of good weather.
                             </Col> */}
-                            <Col xs={12} md={6}>
+                            <Col xs={12} md={6} className="py-4">
                                 Wherever you go, no matter what the weather, always bring your own sunshine. Sunshine is delicious, rain is refreshing, 
                                 wind braces us up, snow is exhilarating;
                                  there is really no such thing as bad weather, only different kinds of good weather.
                             </Col>
-                            <Col xs={12} md={6}>
+                            <Col xs={12} md={6} className="py-4">
                                 {/* <div class="elfsight-app-317930b9-0cd3-4aab-93e6-f892b825a6cc"></div> */}
 
                                 {/* <div className="windy-weather-widget"
@@ -103,7 +103,7 @@ class WatchCard extends Component {
                                 
                                 {/* <a className="weatherwidget-io weather-widget-4" href="https://forecast7.com/en/18d5273d86/pune/" data-label_1="PUNE" data-font="Roboto" data-icons="Climacons Animated" data-days="5" data-theme="original" >PUNE</a> */}
 
-                                <div id="ww_fe074915bc6fb" className="weather-widget-5" v='1.20' loc='auto' a='{"t":"responsive","lang":"en","ids":[],"cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","sl_tof":"3","sl_sot":"celsius","sl_ics":"one_a","font":"Arial"}'><a href="https://weatherwidget.org/" id="ww_fe074915bc6fb_u" target="_blank">Weather widget html for website by Weatherwidget.org</a></div>
+                                <div style={{borderRadius:'0.5rem'}} id="ww_e38277875b04a" v='1.20' loc='auto' a='{"t":"horizontal","lang":"en","ids":[],"cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","sl_sot":"celsius","sl_ics":"one_a","font":"Arial"}'><a href="https://sharpweather.com/" id="ww_e38277875b04a_u" target="_blank">Sharp Weather US</a></div>
                             </Col>
                         </Row>                                           
                     </div>

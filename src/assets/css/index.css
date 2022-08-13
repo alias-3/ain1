@@ -91,7 +91,7 @@ a {
   font-weight: 400;
 }
 
-.card-text {
+.card-content {
   color: var(--font-color-secondary);
   font-size: var(--font-size-card-body-text);    
   margin-top: 2rem;
@@ -99,11 +99,11 @@ a {
   height: fit-content;
 }
 
-.card-text a {
+.card-content a {
   color: var(--font-color-secondary);
 }
 
-.card-text a:hover {
+.card-content a:hover {
   text-decoration: underline;
   color: white;
 }

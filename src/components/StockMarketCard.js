@@ -58,7 +58,7 @@ class StockMarketCard extends Component {
                 <Card.Body>
                     <Card.Title>Markets</Card.Title>
                     <Card.Subtitle>Track markets</Card.Subtitle>
-                    <div className="card-text">
+                    <div className="card-content">
                         <Row>
                             <Col className="d-flex justify-content-center align-items-center">
                                 {/* TradingView widget */}
